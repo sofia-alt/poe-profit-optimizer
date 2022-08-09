@@ -1,13 +1,5 @@
-import express from 'express'
-import cors from 'cors'
 import httpProxy from 'http-proxy'
 import http from 'http'
-
-const app = express();
-const port = 3000;
-
-app.use(cors())
-app.use(express.static('./public'))
 
 const proxy = httpProxy.createProxyServer({});
  
@@ -24,7 +16,3 @@ http.createServer(function(req, res) {
     secure: false
   });
 }).listen(8081);
-
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
