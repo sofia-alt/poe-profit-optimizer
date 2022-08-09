@@ -13,7 +13,7 @@ export default createStore({
 
   actions: {
     loadGems({ commit }) {
-      fetch('https://poe.ninja/api/data/ItemOverview?league=Sentinel&type=SkillGem&language=en',
+      fetch('http://localhost:8081/ItemOverview?league=Sentinel&type=SkillGem&language=en',
       {
         method: 'GET',
       })
