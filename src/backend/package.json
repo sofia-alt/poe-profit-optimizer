@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app"
+    "start": "nodemon app"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"

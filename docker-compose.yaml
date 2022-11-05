@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  backend:
+    build: src/backend
+    # command: yarn dev
+    volumes:
+      - ./src/backend:/backend
+      - /backend/node_modules
+    ports:
+      - 3000:3000
+
+  frontend:
+    build: src/frontend
+    # command: yarn serve
+    environment:
+      PORT: '8080'
+      HOST: '0.0.0.0'
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./src/frontend:/frontend
+      - /frontend/node_modules
